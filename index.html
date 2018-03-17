@@ -36,7 +36,7 @@
               <a href="signup.html">Sign Up</a>
             </li>
             <li>
-              <a href="#" class="btn purple">Login</a>
+              <a href="#login-modal" class="btn purple modal-trigger">Login</a>
             </li>
             <li>
               <a href="https://facebook.com">
@@ -244,6 +244,57 @@
       </div>
   </section>
 
+  <!-- footer -->
+
+  <footer class="page-footer deep-purple lighten-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About Us</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt corporis, esse ipsum accusamus blanditiis ab repellat accusantium?.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="index.html">Home </a></li>
+            <li><a class="grey-text text-lighten-3" href="solutions.html">Solutions </a></li>
+            <li><a class="grey-text text-lighten-3" href="signup.html">Signup </a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright deep-purple darken-1">
+      <div class="container">
+      I-Shoe &copy; 2018
+      <a class="grey-text text-lighten-4 right" href="#!">Terms & Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- login modals -->
+  <div id="login-modal" class="modal">
+      <div class="modal-content">
+          <h4>Account Login</h4>
+          <p>Login to access your account dashboard</p>
+          <form >
+              <div class="input-field">
+                  <input type="email" id="email">
+                  <label for="email">Email</label>
+              </div>
+              <div class="input-field">
+                  <input type="password" id="password">
+                  <label for="password">Password</label>
+              </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close btn grey">  <i class="fa fa-sync"></i> Reset Password</a>
+          <a href="#!" class="modal-action modal-close btn purple">  <i class="fa fa-lock"></i> Login</a>
+      </div>
+  </div>
+
 
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -252,6 +303,7 @@
     $(document).ready(function () {
       $('.carousel.carousel-slider').carousel({fullWidth: true});
       $('.button-collapse').sideNav();
+      $('.modal').modal();
 
     });
   </script>

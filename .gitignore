@@ -1,0 +1,6 @@
+# Dependency directories
+node_modules/
+
+#iNeed2 files and directory
+/4_NetStuff_iNeed2.html
+iNeed2_Resources/

@@ -23,13 +23,13 @@
     <form method="POST" role="form" action="/renter" class="col s12">
         <div class="row">
             <div class="input-field col s12">
-                <input placeholder="Please Enter Provider Or User Name" id="#" type="text" class="validate">
-                <label for="name">Name</label>
+                <input placeholder="Please Enter User Name" id="#" type="text" class="validate" name="name">
+                <label for="#">Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <select>
+                <select name="department">
                     <option value="" disabled selected>Choose Department</option>
                     <option value="1">Men's Shoes</option>
                     <option value="2">Women's Shoes</option>
@@ -37,7 +37,7 @@
                 <label>Department</label>
             </div>
             <div class="input-field col s6">
-                <select multiple>
+                <select multiple name="brand">
                     <option value="" disabled selected>Choose brand</option>
                     <option value="1">Jordan</option>
                     <option value="2">Nike</option>
@@ -53,42 +53,24 @@
         <div class="row">
             <div class="input-field col s6">
                 <label>Begin date</label><br>
-                <input id="beginDate" type="date" class="datepicker">
+                <input id="beginDate" type="date" class="datepicker" name="beginDate">
 
             </div>
             <div class="input-field col s6">
                 <label>End date</label><br>
-                <input id="endDate" type="date" class="datepicker">
+                <input id="endDate" type="date" class="datepicker" name="endDate">
 
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input placeholder="Describe Shoe Color" id="color" type="text" class="validate">
+                <input placeholder="Describe Shoe Color" id="color" type="text" class="validate" name="color">
                 <label for="color">Shoe Color</label>
             </div>
         </div>
         <div class="row">
-            <div class="input-field col s6">
-                <input placeholder="Name Your Price" id="price" type="number" class="validate">
-                <label for="price">Price</label>
-            </div>
-            <div class="input-field col s6">
-                <input placeholder="How many in stock?" id="stock" type="text" class="validate">
-                <label for="stock">Stock</label>
-            </div>
-        </div>
-
-        <div class="row">
             <div class="input-field col s12">
-                <textarea id="image url" class="materialize-textarea" length="140"></textarea>
-                <label for="image url">Image URL</label>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="input-field col s12">
-                <button type="submit" value = "Submit" id="add-btn">Submit</button>
+                <button type="submit" value = "Submit" id="add-btn" name="submit">Submit</button>
             </div>
         </div>
 

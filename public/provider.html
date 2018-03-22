@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="./css/main.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Provider Form</title>
+</head>
+
+<body>
+
+<div class="row">
+    
+    <form method="POST" role="form" action="/provider" class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <input placeholder="Please Enter Provider Or User Name" id="#" type="text" class="validate">
+                <label for="name">Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <select>
+                    <option value="" disabled selected>Choose Department</option>
+                    <option value="1">Men's Shoes</option>
+                    <option value="2">Women's Shoes</option>
+                </select>
+                <label>Department</label>
+            </div>
+            <div class="input-field col s6">
+                <select multiple>
+                    <option value="" disabled selected>Choose brand</option>
+                    <option value="1">Jordan</option>
+                    <option value="2">Nike</option>
+                    <option value="3">Adidas</option>
+                    <option value="4">Reebok</option>
+                    <option value="5">Under Armour</option>
+                    <option value="6">Skechers</option>
+                </select>
+                <label>Brands</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s6">
+                <label>Begin date</label><br>
+                <input id="beginDate" type="date" class="datepicker">
+                
+
+            </div>
+            <div class="input-field col s6">
+                <label>End date</label><br>
+                <input id="endDate" type="date" class="datepicker">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input placeholder="Describe Shoe Color" id="color" type="text" class="validate">
+                <label for="color">Shoe Color</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <input placeholder="Name Your Price" id="price" type="number" class="validate">
+                <label for="price">Price</label>
+            </div>
+            <div class="input-field col s6">
+                <input placeholder="How many in stock?" id="stock" type="text" class="validate">
+                <label for="stock">Stock</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="image url" class="materialize-textarea" length="140"></textarea>
+                <label for="image url">Image URL</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+<button type="submit" value = "Submit" id="add-btn">Submit</button>
+</div>
+        </div>
+
+    </form>
+</div>
+        
+       
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="./js/materialize.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.carousel.carousel-slider').carousel({fullWidth: true});
+        $('.button-collapse').sideNav();
+        $('.modal').modal();
+
+    });
+</script>
+<script src="./js/form.js"></script>
+</body>
+</html>

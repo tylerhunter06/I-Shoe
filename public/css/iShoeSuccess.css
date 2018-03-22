@@ -1,0 +1,13 @@
+body{
+	background-color: #90ff90;
+}
+
+.error_header{
+	margin-top: 1em;
+	margin-bottom:1.5em;
+}
+
+a, a:hover{
+	color: black;
+}
+

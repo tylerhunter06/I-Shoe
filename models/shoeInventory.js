@@ -4,6 +4,8 @@ module.exports = function(sequelize, DataTypes)
 {
 	let shoeInventory = sequelize.define('shoeInventory' , 
 	{
+
+		
 		item_id: 
 		{
 			type: DataTypes.INTEGER,

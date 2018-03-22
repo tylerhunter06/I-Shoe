@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "charles",
-    "password": "It's a secret",
+    "username": "root",
+    "password": "root",
     "database": "exclusiveSneaksDB",
     "host": "127.0.0.1",
     "dialect": "mysql",

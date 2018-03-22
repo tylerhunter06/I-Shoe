@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "charles",
-    "password": "Aiwaly42",
+    "password": "It's a secret",
     "database": "exclusiveSneaksDB",
     "host": "127.0.0.1",
     "dialect": "mysql",
@@ -15,10 +15,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "bftnpdl21rlhe52m",
+    "password": "ofxjpqjwdpslsvcv",
+    "database": "gqcv7udyurydqwht",
+    "host": "ixqxr3ajmyapuwmi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": false
   }

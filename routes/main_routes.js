@@ -1,7 +1,7 @@
 'use strict';
 let express = require('express');
 let fs = require('fs');
-let db     = require('../models');
+let db = require('../models');
 let main_routes = require('express').Router();
 
 
@@ -12,15 +12,41 @@ let main_routes = require('express').Router();
    and there is no interaction with the database.
 */
 main_routes.post('/renter', function(req,res)
-	{
-		console.log("Someone just submitted a renter form.");
+{ 
+	 db.shoeInventory.findOne({
+      where: {
+        department_name: req.body.department_name,
+        shoe_color: req.body.shoe_color,
+        shoe_name: req.body.brand
+      }
+    })
 
-		res.render('iShoeFormSuccess', 
-			{ string: "Your order has been processed.  Thank you for renting from us.",
-			  layout: 'iShoeSuccess',
-			  title:"Renter Feedback"});
+    .then(function(shoeInventory) {
+      	res.render('iShoeFormSuccess', 
+		{ string: "Your order has been processed.  Thank you for renting from us.",
+		  layout: 'iShoeSuccess',
+		  title:"Renter Feedback"});
+    
+	
+	console.log("Someone just submitted a renter form.");
 	}
-);
+
+).
+	catch (function(error)
+	{
+
+			let dataArray = [];
+			let i = 0;
+			for(i = 0; i< error.errors.length; ++i)
+		{
+			dataArray.push(error.errors[i].message);
+		}
+
+		res.render('iShoeFormErr', { array: dataArray});
+	}
+	);
+}); // End of the catch clause
+
 
 /* main_routes.post('/provider', ...) is the function that is called when
    someone submits the provider form.  Note that there is no error checking

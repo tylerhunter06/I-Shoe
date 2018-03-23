@@ -73,8 +73,7 @@ main_routes.post('/provider', function(req,res)
 
     ); // End of the catch clause
 
-}
-);
+});
 
 /* main_routes.get('/provider', ...) is the function that is called when
    someone clicks to go to the provider form webpage.  Note that there is

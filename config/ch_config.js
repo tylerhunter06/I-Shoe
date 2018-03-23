@@ -1,10 +1,11 @@
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
-  database: "exclusiveSneaksDB"
+    host:"localhost",
+    port:8889,
+    user:"root",
+    password:"root",
+    database:"exclusiveSneaksDB"
 });
 
 con.connect(function(err) {
@@ -22,7 +23,7 @@ function afterConnection() {
 	console.log(res[3].department_name); 
 	console.log(res[4].shoe_name); 
 	console.log(res[5].shoe_color); 
-	console.log(res[6].image_ur); 
+	console.log(res[6].image_ur);
 	console.log(res[7].price); 
 	console.log(res[8].stock_quantity);  
 

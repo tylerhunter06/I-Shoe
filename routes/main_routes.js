@@ -6,6 +6,7 @@ let main_routes = require('express').Router();
 
 
 
+
 /* main_routes.post('/renter', ...) is the function that is called when
    someone submits the renter form.  Note that there is no error checking
    and there is no interaction with the database.
@@ -26,14 +27,53 @@ main_routes.post('/renter', function(req,res)
    and there is no interaction with the database.
 */
 main_routes.post('/provider', function(req,res)
-	{
-		console.log("Someone just submitted a provider form.");
 
-		res.render('iShoeFormSuccess', 
-			{ string: "Thank you for providing shoes for us to rent.", 
-			layout: 'iShoeSuccess',
-			title: "Provider Feedback"});
-	}
+{
+    console.log(req.body);
+    db.shoeInventory.create(
+
+
+        {
+            provider_name: req.body.name,
+            department_name: req.body.department,
+            shoe_name: req.body.brand,
+            shoe_color: req.body.color,
+            img_url: req.body.img_url,
+            price: req.body.price,
+            stock_quantity: req.body.stockQuantity
+
+		})
+	//End of the anonymous object passed to create()
+
+     //End of db.shoeInventory.create
+
+		.then(function(shoeInventory)
+        {
+
+            res.render('iShoeFormSuccess',
+                { string: "Thank you for providing shoes for us to rent.",
+                    layout: 'iShoeSuccess',
+                    title: "Provider Feedback"});
+        } // End of the function definition for the then
+
+    ). // End of the then clause
+
+    catch (function(error)
+        {
+            let dataArray = [];
+            let i = 0;
+            for(i = 0; i< error.errors.length; ++i)
+            {
+                dataArray.push(error.errors[i].message);
+            }
+
+            res.render('iShoeFormErr', { array: dataArray});
+
+        }
+
+    ); // End of the catch clause
+
+}
 );
 
 /* main_routes.get('/provider', ...) is the function that is called when
@@ -76,7 +116,7 @@ main_routes.get('/add', function(req,res)
 	      	provider_name: "Joe Schmoe",
 	      	department_name: "Men's Department",
 	      	shoe_name: "Herbert",
-	      	
+	      	shoe_color: "black",
 	      	img_url: "iNeed2.charlesroberts.org",
 	      	price: 255.99,
 	      	stock_quantity: 300

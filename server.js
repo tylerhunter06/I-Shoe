@@ -20,6 +20,7 @@ let port = process.env.PORT || 17001;
 
 // Create the express object that we'll use
 var app = express();
+app.use(bodyParser());
 
 // Tell the express object where front end files are
 app.use(express.static(process.cwd() + '/public'));
